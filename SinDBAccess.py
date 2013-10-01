@@ -25,8 +25,8 @@ def __ifornot__(e, t, f):
 		return f
 
 class SinDBAccess:
-	def __init__(self, db):
-		self.debug = True
+	def __init__(self, db, debug=False):
+		self.debug = debug
 		self.set_db(db)
 		self.autocommit = True
 		
