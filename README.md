@@ -14,7 +14,12 @@ You can use SinDBAccess like this follow:
 <pre><code>dba = SinDBAccess(con)</code></pre>
 
 * After this, you can use this <code>dba</code> to access Database.
-
+* At most time, you need create a table using a template.
+<pre><code># Create a table, this table has 3 fields(id, name and age).
+# id is int type type
+# name is char(32) type
+# age is int type
+dba.create_table(table, {'name':'char(32)','age':0}, new=True)</code></pre>
 
 
 
