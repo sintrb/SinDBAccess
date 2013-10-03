@@ -3,6 +3,7 @@
 Created on 2013-10-1
 
 @author: RobinTang
+@see: https://github.com/sintrb/SinDBAccess
 '''
 
 import types
