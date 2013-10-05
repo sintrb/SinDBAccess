@@ -24,5 +24,14 @@ dba.create_table('tb_user', {'name':'char(32)','age':0}, new=True)</code></pre>
 * Then dba will creata a table named 'tb_user' in Database. After this, you can use <code>dba</code> to insert new record to 'tb_user'.
 <pre><code>dba.add_object('tb_user', {'name':'robin', 'age':23})</code></pre>
 
+* Of course, you can get record from 'tb_user'.
+<pre><code># get all user
+users = dba.get_objects('tb_user')
+
+# get all user witch age is 23
+users = dba.get_objects('tb_user', columns=['name'], conditions={'age':23})
+
+# get record witch id is 10
+user = dba.get_object('tb_user', 10)</code></pre>
 
 
