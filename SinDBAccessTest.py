@@ -31,6 +31,8 @@ class SinDBAccessTest(unittest.TestCase):
 								})
 		print '%s cast time: %ss'%(name, time.time() - stm)
 		rcount = dba.get_objects(table, 'COUNT(*) as `count`')[0]['count']
+		dba.get_objects('tb_user', columns=['name'], conditions={'age':23})
+		dba.get_object(table, 10)
 		self.assertEqual(count, rcount, 'SELECT count not equal INSERT count')
 		
 	def testMySQL(self):
