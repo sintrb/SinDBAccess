@@ -192,7 +192,18 @@ class SinDBAccess:
 			return objs[0]
 		else:
 			return None
-	
+		
+	def get_count(self, table, conditions='', condtype='and'):
+		'''
+		Get the count of the table.
+		'''
+		objs = self.get_objects(table, columns='COUNT(*) as `count`', conditions=conditions, condtype=condtype)
+		if objs and len(objs):
+			return objs[0]['count']
+		else:
+			return 0
+		
+
 	def set_objects(self, table, obj, conditions='', condtype='and'):
 		'''
 		Update objects to database by conditions
