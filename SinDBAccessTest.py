@@ -46,7 +46,7 @@ class SinDBAccessTest(unittest.TestCase):
 		'''
 		Test for sqlite
 		'''
-		db = sqlite3.connect("abc.db")
+		db = sqlite3.connect("abc.sqlite")
 		self.__testDBA__(db, 'testSQLite')
 		
 if __name__ == '__main__':
